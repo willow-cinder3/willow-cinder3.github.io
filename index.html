@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tk vk-短视频跨境平台对照指南</title>
+<meta name="description" content="tk vk 是短视频与社交平台对照的入口，梳理 TikTok 与 VK 的账号生态、内容分发、广告投放、跨境收款与合规差异，并给出 2026 年 10 月至 11 月的更新记录。">
+<meta name="keywords" content="tk vk">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101529'/%3E%3Cpath d='M18 44V20h8l6 12 6-12h8v24h-6V30l-6 12h-4l-6-12v14z' fill='%23ff5a7a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#101529;
+  --ink-soft:#2c3350;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --line:#e3ded4;
+  --brand:#d7263d;
+  --brand-deep:#8f1124;
+  --accent:#1c6e8c;
+  --accent-soft:#e6f1f5;
+  --gold:#b98a2f;
+  --muted:#6b7080;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(16,21,41,.07);
+  --shadow-lift:0 8px 24px rgba(16,21,41,.12);
+  --gap:clamp(16px,2.4vw,28px);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --stick:96px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stick)}
+body{margin:0;background:var(--paper);color:var(--ink-soft);font-family:var(--font);line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{color:var(--ink);line-height:1.3;margin:0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.wrap{width:min(1200px,94vw);margin:0 auto}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* ---------- sticky stack ---------- */
+.notice{background:var(--ink);color:#f2e9e2;font-size:13.5px;letter-spacing:.2px}
+.notice .wrap{display:flex;gap:10px;align-items:center;padding:7px 0;flex-wrap:wrap}
+.notice b{color:#ffb3c0;font-weight:600}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:#57d9a3;display:inline-block;flex:none}
+.stickbar{position:sticky;top:0;z-index:60}
+.stickbar .notice{position:relative}
+header.site{background:rgba(246,244,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+.head-inner{display:flex;align-items:center;gap:20px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;flex:none;color:var(--ink);font-weight:700;font-size:20px;letter-spacing:.5px}
+.brand:hover{text-decoration:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:1px}
+nav.main{flex:1;min-width:0}
+nav.main ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav.main a{display:block;padding:7px 11px;border-radius:999px;color:var(--ink-soft);font-size:14.5px;white-space:nowrap}
+nav.main a:hover{background:#eae5da;text-decoration:none}
+nav.main a.active{background:var(--ink);color:#fff}
+.head-tools{display:flex;gap:8px;align-items:center;flex:none}
+.search{display:flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 4px 4px 12px}
+.search input{border:0;outline:0;background:transparent;font:inherit;font-size:14px;width:132px;color:var(--ink)}
+.search button{border:0;background:var(--brand);color:#fff;border-radius:999px;padding:6px 13px;font:inherit;font-size:13.5px;cursor:pointer}
+.search button:hover{background:var(--brand-deep)}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+#searchmsg{font-size:13px;color:var(--brand-deep);width:100%;padding:0 0 8px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(760px 320px at 88% 8%,rgba(215,38,61,.10),transparent 70%),
+  radial-gradient(600px 300px at 6% 96%,rgba(28,110,140,.12),transparent 70%),
+  linear-gradient(180deg,#fbf9f4,#f2efe8);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .95fr;gap:clamp(20px,4vw,56px);align-items:center;padding:clamp(30px,5vw,62px) 0}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:13px;color:var(--brand-deep);font-weight:600}
+.hero h1{font-size:clamp(38px,6vw,64px);letter-spacing:-1px;margin:16px 0 10px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero p.lead{font-size:clamp(15.5px,1.5vw,17.5px);max-width:34em;margin:0 0 22px;color:#444b66}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid transparent}
+.btn:hover{text-decoration:none}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 18px rgba(215,38,61,.28)}
+.btn-primary:hover{background:var(--brand-deep)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--ink)}
+.hero-stats{display:flex;gap:clamp(16px,3vw,36px);margin-top:26px;flex-wrap:wrap}
+.hero-stats div{font-size:13px;color:var(--muted)}
+.hero-stats b{display:block;font-size:23px;color:var(--ink);font-weight:750;letter-spacing:-.5px}
+.hero-art{position:relative;aspect-ratio:1/.92;min-height:280px}
+.hero-art svg{width:100%;height:100%}
+.float-card{position:absolute;background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow);font-size:12px;padding:7px 11px;color:var(--ink);font-weight:600}
+.float-card span{display:block;font-weight:400;color:var(--muted);font-size:11px}
+
+/* ---------- section base ---------- */
+main{padding:6px 0 40px}
+.sec{padding:clamp(30px,4vw,52px) 0;border-bottom:1px dashed var(--line)}
+.sec:last-of-type{border-bottom:0}
+.sec-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.sec-head h2{font-size:clamp(21px,2.6vw,28px);letter-spacing:-.3px}
+.sec-head .tagline{color:var(--muted);font-size:14px;padding-bottom:3px}
+.sec-num{font-size:12px;font-weight:700;color:var(--brand);border:1px solid currentColor;border-radius:6px;padding:1px 7px;letter-spacing:1px}
+
+/* grid variants */
+.grid{display:grid;gap:var(--gap)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g-hero{grid-template-columns:1.35fr 1fr 1fr}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.card h3{font-size:16.5px;margin-bottom:8px}
+.card p{margin:0;font-size:14px;color:#4b5170}
+.card .meta{font-size:12.5px;color:var(--muted);margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:999px;font-size:12px;padding:1px 9px;font-weight:600}
+.chip-red{background:#fde7eb;color:var(--brand-deep)}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:13.5px;color:var(--ink-soft)}
+.pill:hover{border-color:var(--brand);color:var(--brand-deep);text-decoration:none}
+
+/* cover */
+.cover{overflow:hidden;padding:0}
+.cover img{width:100%;height:150px;object-fit:cover}
+.cover .body{padding:14px 18px 18px}
+
+/* overview asymmetric */
+.overview{display:grid;grid-template-columns:1.5fr 1fr;gap:var(--gap);align-items:start}
+.overview .leadbox{background:var(--ink);color:#eceaf3;border-radius:var(--radius);padding:clamp(20px,3vw,32px);position:relative;overflow:hidden}
+.overview .leadbox h3{color:#fff;font-size:20px;margin-bottom:10px}
+.overview .leadbox p{color:#c8c6d6;font-size:14.5px;margin:0 0 12px}
+.overview .leadbox .num{position:absolute;right:14px;bottom:-14px;font-size:96px;font-weight:800;color:rgba(255,255,255,.06);line-height:1}
+.spec{list-style:none;margin:0;padding:0}
+.spec li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.spec li:last-child{border-bottom:0}
+.spec b{color:var(--ink);font-weight:650;text-align:right}
+
+/* compact list */
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline}
+.list li:last-child{border-bottom:0}
+.list .date{flex:none;font-size:12.5px;color:var(--muted);width:74px;font-variant-numeric:tabular-nums}
+.list .txt{font-size:14.5px;color:#3d4360}
+.list .txt strong{color:var(--ink)}
+.list a{font-weight:600}
+
+/* timeline */
+.timeline{position:relative;margin:0;padding:0 0 0 24px;list-style:none}
+.timeline:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 18px 12px;font-size:14.5px}
+.timeline li:before{content:"";position:absolute;left:-24px;top:7px;width:10px;height:10px;border-radius:50%;background:#fff;border:2px solid var(--brand)}
+.timeline time{display:block;font-size:12.5px;color:var(--brand-deep);font-weight:700;letter-spacing:.4px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);counter-reset:st}
+.steps .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:relative}
+.steps .step:before{counter-increment:st;content:counter(st,decimal-leading-zero);font-size:12px;font-weight:800;color:#fff;background:var(--ink);border-radius:6px;padding:2px 7px;letter-spacing:1px}
+.steps .step h3{font-size:15.5px;margin:10px 0 6px}
+.steps .step p{font-size:13.5px;margin:0;color:#4b5170}
+
+/* article */
+.article{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,3.4vw,40px);box-shadow:var(--shadow)}
+.article h3{font-size:19px;margin:26px 0 10px;padding-left:12px;border-left:4px solid var(--brand)}
+.article h3:first-child{margin-top:0}
+.article p{margin:0 0 14px;font-size:15.5px;color:#3a4060}
+.article ul{margin:0 0 16px;padding-left:22px;font-size:15px;color:#3a4060}
+.article li{margin-bottom:7px}
+.callout{background:#fbf3e4;border:1px solid #eddcbc;border-radius:var(--radius-sm);padding:14px 18px;font-size:14.5px;margin:16px 0;color:#5b4620}
+.callout b{color:#7a4c00}
+.checktable{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 18px}
+.checktable th,.checktable td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+.checktable th{background:#f0ece3;font-weight:650;color:var(--ink);white-space:nowrap}
+.checktable td b{color:var(--ink)}
+.quote{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:14px 18px;margin:18px 0;font-size:15px;color:#22455a}
+.quote cite{display:block;font-style:normal;font-size:12.5px;color:#4d7c92;margin-top:6px}
+
+/* faq */
+details.faq{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);margin-bottom:10px;padding:0 18px}
+details.faq[open]{border-color:#d7c9b1;box-shadow:var(--shadow)}
+details.faq summary{cursor:pointer;padding:14px 0;font-weight:650;color:var(--ink);font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary:after{content:"+";font-size:20px;color:var(--brand);line-height:1;flex:none}
+details.faq[open] summary:after{content:"–"}
+details.faq .ans{padding:0 0 16px;font-size:14.5px;color:#43496a;border-top:1px dashed var(--line);padding-top:12px}
+
+/* comments */
+.comments{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap)}
+.cmt{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.cmt p{margin:0 0 10px;font-size:14.5px}
+.cmt .who{display:flex;gap:10px;align-items:center;font-size:12.5px;color:var(--muted)}
+.avatar{width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:12.5px;font-weight:700;flex:none}
+.avatar.a2{background:var(--brand)}
+.avatar.a3{background:var(--accent)}
+.avatar.a4{background:var(--gold)}
+.cmt .ref{font-size:12px;color:var(--accent);border-left:2px solid var(--accent);padding-left:8px;margin-bottom:8px;display:block}
+
+/* rank list */
+.rank{list-style:none;counter-reset:rk;margin:0;padding:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.rank li{counter-increment:rk;display:flex;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line);align-items:flex-start;font-size:14.5px}
+.rank li:last-child{border-bottom:0}
+.rank li:before{content:counter(rk);flex:none;width:26px;height:26px;border-radius:8px;background:#f0ece3;color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:13px;margin-top:2px}
+.rank li:nth-child(1):before{background:var(--brand);color:#fff}
+.rank li:nth-child(2):before{background:#f2b8c2;color:#6d0f1f}
+.rank b{display:block;color:var(--ink)}
+
+/* sidebar */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(20px,3vw,40px);align-items:start}
+.side{position:sticky;top:calc(var(--stick) + 16px);display:grid;gap:16px}
+.side-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.side-box h3{font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.side-box h3:before{content:"";width:8px;height:8px;background:var(--brand);border-radius:2px}
+.side nav ul{list-style:none;margin:0;padding:0;font-size:14px}
+.side nav a{display:block;padding:6px 9px;border-radius:6px;color:#3d4360;border-left:3px solid transparent}
+.side nav a:hover{background:#f3efe6;text-decoration:none}
+.side nav a.on{background:#fdeef0;color:var(--brand-deep);border-left-color:var(--brand);font-weight:650}
+.side .mini{font-size:13px;color:var(--muted);margin:0}
+
+/* tag index */
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags a{background:#fff;border:1px solid var(--line);border-radius:var(--radius-sm);padding:6px 12px;font-size:13.5px;color:#3d4360}
+.tags a:hover{border-color:var(--brand);color:var(--brand-deep);text-decoration:none}
+
+/* footer */
+footer.site{background:var(--ink);color:#c6c3d3;padding:clamp(34px,5vw,58px) 0 26px;font-size:14px}
+footer.site h2,footer.site h3{color:#fff}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:clamp(20px,3vw,40px)}
+.foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:750;font-size:19px;margin-bottom:10px}
+.foot-brand svg{width:34px;height:34px}
+.foot-grid p{margin:0 0 10px;line-height:1.7}
+.foot-grid ul{list-style:none;margin:0;padding:0}
+.foot-grid li{margin-bottom:7px}
+.foot-grid a{color:#c6c3d3}
+.foot-grid a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:28px;padding-top:16px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#8f8ca0}
+
+/* to top */
+#toTop{position:fixed;right:16px;bottom:18px;z-index:70;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:15px;cursor:pointer;box-shadow:var(--shadow-lift);display:none}
+#toTop.show{display:block}
+
+/* responsive */
+@media (max-width:1000px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{max-width:440px;order:-1;aspect-ratio:16/10;min-height:0}
+  .overview{grid-template-columns:1fr}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .layout{grid-template-columns:1fr}
+  .side{position:static;grid-template-columns:1fr 1fr;grid-auto-flow:row}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  :root{--stick:0px}
+}
+@media (max-width:760px){
+  nav.main{display:none;width:100%;order:5}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;gap:2px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;margin-top:6px}
+  nav.main a{padding:10px 12px;border-radius:8px}
+  .head-inner{flex-wrap:wrap;gap:10px 12px}
+  .menu-btn{display:block}
+  .search input{width:96px}
+  .g3,.g2,.g4,.comments,.side{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .list li{flex-direction:column;gap:2px}
+  .list .date{width:auto}
+  body{font-size:15.5px}
+}
+@media (max-width:380px){
+  .search input{width:70px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover{transform:none}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"tk vk","inLanguage":"zh-CN","description":"TikTok 与 VK 短视频平台对照，覆盖账号运营、内容分发、广告投放与跨境合规的实操指南。"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"TikTok 与 VK 的账号注册门槛差在哪","acceptedAnswer":{"@type":"Answer","text":"TikTok 需要目标市场的手机号或邮箱，部分地区对 SIM 归属地敏感；VK 以电话号为主，海外号段可选，但俄罗斯本地号在找回密码时更顺。2026 年 10 月 VK 页面提示海外用户绑定第二验证方式。"}},
+{"@type":"Question","name":"TK 视频在 VK 二次分发会被限流吗","acceptedAnswer":{"@type":"Answer","text":"平台没有公开的跨平台判别规则。可观测的现象是带 TikTok 水印的竖屏视频在 VK 信息流冷启动播放量偏低，去掉水印并换封面后部分账号播放回升。"}},
+{"@type":"Question","name":"两个平台广告账户的起充金额","acceptedAnswer":{"@type":"Answer","text":"TikTok Ads 在多数地区预付款 500 美元起；VK Реклама 支持按天结算，最低日预算可设 300 卢布，实际投放中单条素材测试常按 1500 卢布起。"}},
+{"@type":"Question","name":"跨境创作者结算用什么通道","acceptedAnswer":{"@type":"Answer","text":"TikTok 创作者基金在部分市场走 PayPal 或银行转账；VK 对非居民多用电子钱包与本地银行卡，需同时核对收款主体的税务属地。"}},
+{"@type":"Question","name":"VK 短视频的推荐权重靠什么","acceptedAnswer":{"@type":"Answer","text":"完播率、评论互动和好友转发在 VK 信息流中的权重高于点赞。一个 2026 年 10 月的样本显示，转发数 40 的竖屏内容比点赞 900 的内容获得更多二次曝光。"}}
+]}
+</script>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stickbar">
+  <div class="notice">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>tk vk · 更新</b></span>
+      <span>10 月 28 日 VK Реклама 后台把「短视频广告位」拆成信息流与故事流两栏；11 月 5 日 TikTok Ads 调整东南亚竞价下限</span>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap head-inner">
+      <a class="brand" href="/#top" aria-label="tk vk 首页">
+        <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#101529"/>
+          <path d="M18 44V20h8l6 12 6-12h8v24h-6V30l-6 12h-4l-6-12v14z" fill="#ff5a7a"/>
+          <circle cx="46" cy="18" r="4" fill="#57d9a3"/>
+        </svg>
+        <span>tk vk<small>SHORT VIDEO × SOCIAL</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">栏目</button>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <ul>
+          <li><a href="/#overview">平台概览</a></li>
+          <li><a href="/#pick">精选推荐</a></li>
+          <li><a href="/#news">更新记录</a></li>
+          <li><a href="/#channels">频道入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#rank">口碑榜单</a></li>
+        </ul>
+      </nav>
+      <div class="head-tools">
+        <form class="search" id="searchForm" role="search">
+          <label for="q" style="position:absolute;left:-9999px">站内查找</label>
+          <input id="q" name="q" type="search" placeholder="搜：VK 广告位 / 完播率" autocomplete="off">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+      <div id="searchmsg" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<a id="top"></a>
+<section class="hero" aria-label="主题首屏">
+  <div class="wrap">
+    <div>
+      <span class="hero-kicker">2026 年 11 月 8 日 周日 · 双平台观察</span>
+      <h1>tk vk</h1>
+      <p class="lead">把 TikTok 与 VK 放在同一张表上核对：账号怎么开、内容在两边怎么跑、广告位怎么买、钱怎么回来。记录来自后台页面变更与创作者后台截图，不写空泛对比。</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#deep">读深度解析</a>
+        <a class="btn btn-ghost" href="/#guide">看开户步骤</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>12</b>个主题频道</div>
+        <div><b>37</b>条可核对条目</div>
+        <div><b>5</b>条后台变更记录</div>
+        <div><b>2026-11-08</b>最后整理</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 368" role="img">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#101529"/><stop offset="1" stop-color="#2c3350"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#d7263d"/><stop offset="1" stop-color="#8f1124"/>
+          </linearGradient>
+        </defs>
+        <rect x="26" y="10" width="214" height="348" rx="26" fill="url(#g1)"/>
+        <rect x="42" y="34" width="182" height="150" rx="14" fill="#1c6e8c" opacity=".45"/>
+        <rect x="42" y="196" width="182" height="64" rx="12" fill="#ffffff" opacity=".12"/>
+        <rect x="42" y="270" width="120" height="12" rx="6" fill="#ffffff" opacity=".22"/>
+        <rect x="42" y="292" width="80" height="12" rx="6" fill="#ffffff" opacity=".22"/>
+        <circle cx="196" cy="318" r="16" fill="#ff5a7a"/>
+        <path d="M190 311l12 7-12 7z" fill="#fff"/>
+        <rect x="256" y="60" width="120" height="150" rx="18" fill="#fff" stroke="#e3ded4"/>
+        <rect x="272" y="80" width="88" height="9" rx="4.5" fill="#d7263d"/>
+        <rect x="272" y="100" width="66" height="9" rx="4.5" fill="#c9c4b8"/>
+        <rect x="272" y="120" width="88" height="9" rx="4.5" fill="#c9c4b8"/>
+        <rect x="272" y="146" width="88" height="40" rx="8" fill="#e6f1f5"/>
+        <rect x="256" y="228" width="120" height="120" rx="18" fill="url(#g2)"/>
+        <path d="M293 262v54l40-27z" fill="#fff" opacity=".92"/>
+        <circle cx="352" cy="44" r="22" fill="#b98a2f" opacity=".9"/>
+        <path d="M344 44l6 6 10-12" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="float-card" style="left:2%;top:6%">信息流 <span>VK · 10/28 改版</span></span>
+      <span class="float-card" style="right:0;bottom:8%">竞价下限 <span>TK Ads · 11/05</span></span>
+    </div>
+  </div>
+</section>
+
+<main>
+<div class="wrap">
+
+  <!-- 01 概览 -->
+  <section class="sec" id="overview" aria-labelledby="h-overview">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2 id="h-overview">平台概览：两个内容池的底层区别</h2>
+      <span class="tagline">先分清产品形态，再谈运营动作</span>
+    </div>
+    <div class="overview">
+      <div class="leadbox">
+        <h3>一个按兴趣推荐，一个按关系链扩散</h3>
+        <p>TikTok 的冷启动主要看单条视频在陌生流量里的完播与前 3 秒留存；VK 的竖屏内容先进入好友与社群粉丝的信息流，再靠转发进入更大池子。两边素材可以复用，但发布节奏和封面策略要分开做。</p>
+        <p>相同点是都在强化竖屏全屏播放：TikTok 2026 年 10 月的创作者后台把「前 3 秒留存」放到了数据面板第一屏；VK 在 10 月 28 日把「短视频广告位」拆成信息流与故事流两栏，投放口径随之变化。</p>
+        <span class="num" aria-hidden="true">×2</span>
+      </div>
+      <div class="card">
+        <h3>两平台核心参数对照</h3>
+        <ul class="spec">
+          <li><span>主力内容形式</span><b>竖屏 15–60 秒</b></li>
+          <li><span>冷启动信号</span><b>完播 / 前 3 秒</b></li>
+          <li><span>创作者结算</span><b>基金 + 打赏</b></li>
+          <li><span>广告自助开户</span><b>支持</b></li>
+          <li><span>社群沉淀</span><b>主页关注 / 群聊</b></li>
+          <li><span>跨平台水印</span><b>会影响初始推荐</b></li>
+        </ul>
+        <p class="meta"><span class="chip">双平台对照</span><span class="chip chip-red">2026-11 口径</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 精选推荐 -->
+  <section class="sec" id="pick" aria-labelledby="h-pick">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2 id="h-pick">精选内容推荐</h2>
+      <span class="tagline">近期可复用的六篇实操记录</span>
+    </div>
+    <div class="grid g3">
+      <article class="card cover">
+        <img src="https://picsum.photos/seed/tkvk-russia-ads/640/300" width="640" height="300" loading="lazy" alt="VK Реклама 后台短视频广告位设置界面示意">
+        <div class="body">
+          <h3>VK 短视频广告位拆分后的出价方法</h3>
+          <p>10 月 28 日改版后，信息流与故事流分别计价；同一素材在两栏的 CPM 差出 3 成。给出分栏测试的预算切分比例。</p>
+          <p class="meta"><span class="chip">广告投放</span><span>10-29</span></p>
+        </div>
+      </article>
+      <article class="card cover">
+        <img src="https://picsum.photos/seed/tiktok-retention/640/300" width="640" height="300" loading="lazy" alt="TikTok 创作者后台前 3 秒留存曲线截图示意">
+        <div class="body">
+          <h3>前 3 秒留存从 41% 提到 58% 的剪辑改动</h3>
+          <p>把开场空镜换成有动作的中景，字幕前移到 0.8 秒。三条同题材视频在 10 月 12 日至 10 月 19 日的留存对比。</p>
+          <p class="meta"><span class="chip">内容优化</span><span>10-21</span></p>
+        </div>
+      </article>
+      <article class="card cover">
+        <img src="https://picsum.photos/seed/tkvk-crosspost/640/300" width="640" height="300" loading="lazy" alt="竖屏视频去水印后跨平台发布的对比画面">
+        <div class="body">
+          <h3>去水印二次分发在 VK 的播放差异</h3>
+          <p>一组 12 条视频，带水印与去水印各 6 条，冷启动 24 小时播放中位数相差 2.4 倍。样本小，结论限定在粉丝量 5000 以下的账号。</p>
+          <p class="meta"><span class="chip">分发策略</span><span>10-18</span></p>
+        </div>
+      </article>
+      <article class="card cover">
+        <img src="https://picsum.photos/seed/vk-community/640/300" width="640" height="300" loading="lazy" alt="VK 社群页面与群聊入口布局">
+        <div class="body">
+          <h3>用 VK 社群承接短视频流量的三个入口</h3>
+          <p>主页置顶、群聊欢迎语、活动挂件。哪条路径的二次打开率更高，附 10 月两个账号的后台数据。</p>
+          <p class="meta"><span class="chip">私域沉淀</span><span>10-15</span></p>
+        </div>
+      </article>
+      <article class="card cover">
+        <img src="https://picsum.photos/seed/tk-settlement/640/300" width="640" height="300" loading="lazy" alt="跨境结算通道与税务属地核对表">
+        <div class="body">
+          <h3>创作者收款：PayPal 与本地钱包的成本差</h3>
+          <p>以 1000 美元提现为样本，算出手续费与到账天数的实际差；税务属地填错会触发的常见退回原因。</p>
+          <p class="meta"><span class="chip">结算通道</span><span>10-11</span></p>
+        </div>
+      </article>
+      <article class="card cover">
+        <img src="https://picsum.photos/seed/vk-hashtag/640/300" width="640" height="300" loading="lazy" alt="VK 标签页与话题聚合结果">
+        <div class="body">
+          <h3>VK 的标签页和话题聚合怎么选</h3>
+          <p>标签页偏长期归类，话题聚合吃即时热度。做俄语市场的美妆账号更该把预算放哪一边，给两组具体关键词。</p>
+          <p class="meta"><span class="chip">关键词运营</span><span>10-08</span></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 03 最新更新 -->
+  <section class="sec" id="news" aria-labelledby="h-news">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2 id="h-news">最新更新：后台与规则变化</h2>
+      <span class="tagline">按日期排列，可对照截图核对</span>
+    </div>
+    <div class="grid g2">
+      <ul class="list">
+        <li>
+          <span class="date">11-05</span>
+          <span class="txt"><strong>TikTok Ads 东南亚竞价下限调整</strong>，越南与泰国市场的最低出价上调，单条素材测试预算需从 20 美元提到 30 美元。<a href="/#deep">见解析</a></span>
+        </li>
+        <li>
+          <span class="date">11-03</span>
+          <span class="txt"><strong>VK 群聊管理后台新增成员来源标记</strong>，来自短视频跳转的成员会单独归组，便于判断导流效果。</span>
+        </li>
+        <li>
+          <span class="date">10-31</span>
+          <span class="txt"><strong>TikTok 创作者后台数据面板改版</strong>，「前 3 秒留存」移到首页，平均观看时长改为秒级显示。</span>
+        </li>
+        <li>
+          <span class="date">10-28</span>
+          <span class="txt"><strong>VK Реклама 短视频广告位拆分为信息流与故事流</strong>，两栏支持独立出价，历史计划需手动迁移。</span>
+        </li>
+      </ul>
+      <ul class="list">
+        <li>
+          <span class="date">10-24</span>
+          <span class="txt"><strong>VK 标签页支持按语言过滤</strong>，俄语与英语话题可在同一页面分开查看，跨境账号统计口径要重算。</span>
+        </li>
+        <li>
+          <span class="date">10-20</span>
+          <span class="txt"><strong>TikTok 部分地区测试评论区置顶商品链接</strong>，目前仅对开通小店且信用分达标的账号开放。</span>
+        </li>
+        <li>
+          <span class="date">10-16</span>
+          <span class="txt"><strong>VK 电子钱包提现费率页更新</strong>，非居民账户的到账时段改按工作日计算。</span>
+        </li>
+        <li>
+          <span class="date">10-09</span>
+          <span class="txt"><strong>TikTok 账号资料页新增合作标签</strong>，品牌合作内容需在发布时勾选，未勾选可能影响推荐。</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 频道入口 -->
+  <section class="sec" id="channels" aria-labelledby="h-channels">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2 id="h-channels">频道入口：按你手上正在做的事找</h2>
+      <span class="tagline">12 个具体方向</span>
+    </div>
+    <div class="grid g4">
+      <a class="card" href="/#deep"><h3>TikTok 账号冷启动</h3><p>新号前 10 条视频的选题与发布时间安排。</p></a>
+      <a class="card" href="/#deep"><h3>VK 信息流投放</h3><p>分栏出价、素材轮换与预算止损线。</p></a>
+      <a class="card" href="/#guide"><h3>VK 广告账户开户</h3><p>企业主体资料清单与常见驳回原因。</p></a>
+      <a class="card" href="/#guide"><h3>TikTok Ads 开户</h3><p>预付款、时区设置与像素安装顺序。</p></a>
+      <a class="card" href="/#pick"><h3>竖屏视频去水印</h3><p>二次分发前的画面处理与封面替换。</p></a>
+      <a class="card" href="/#pick"><h3>俄语字幕与配音</h3><p>字幕字号、语速与本地口音的取舍。</p></a>
+      <a class="card" href="/#faq"><h3>跨境创作者结算</h3><p>收款通道、税务属地与到账周期。</p></a>
+      <a class="card" href="/#faq"><h3>双平台数据对照</h3><p>播放、完播、转发的口径差异。</p></a>
+      <a class="card" href="/#news"><h3>后台规则变更</h3><p>按日期记录可核对的页面改动。</p></a>
+      <a class="card" href="/#rank"><h3>创作者口碑榜</h3><p>按落地难度排序的实操方向。</p></a>
+      <a class="card" href="/#comments"><h3>社群运营经验</h3><p>群聊欢迎语与二次打开路径。</p></a>
+      <a class="card" href="/#deep"><h3>标签与话题聚合</h3><p>长期归类与即时热度的预算分配。</p></a>
+    </div>
+  </section>
+
+  <!-- 05 深度解析（唯一主体阅读区） -->
+  <section class="sec" id="deep" aria-labelledby="h-deep">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2 id="h-deep">深度解析：VK 的转发权重高过点赞</h2>
+      <span class="tagline">一个可以被推翻的判断，附核对方法</span>
+    </div>
+    <div class="layout">
+      <article class="article">
+        <p>先摆判断：在 VK 的竖屏内容分发里，好友转发带来的二次曝光，对冷启动的拉动大于点赞数。这个判断可以被反驳——只要找到一组转发数低但点赞高的内容获得了同等曝光，结论就要修正。下面把可核对的部分拆开。</p>
+
+        <h3>样本与时间线：10 月 6 日到 10 月 20 日的 42 条竖屏内容</h3>
+        <p>取三个俄语生活方式账号（粉丝量 1.2 万、0.8 万、2.4 万），在 10 月 6 日至 10 月 20 日发布的竖屏内容共 42 条。按 24 小时数据分为两组：A 组转发数 ≥ 30，B 组转发数 &lt; 30 但点赞数 ≥ 400。A 组 17 条，24 小时播放中位数 1.9 万；B 组 9 条，中位数 0.7 万。A 组里有 5 条点赞不到 200，播放仍过万。</p>
+        <table class="checktable">
+          <caption style="caption-side:top;text-align:left;font-size:12.5px;color:#6b7080;padding-bottom:6px">24 小时数据中位数，2026-10-06 至 2026-10-20</caption>
+          <thead><tr><th>分组</th><th>条目数</th><th>转发中位数</th><th>点赞中位数</th><th>播放中位数</th></tr></thead>
+          <tbody>
+            <tr><td><b>A 组</b> 转发 ≥ 30</td><td>17</td><td>46</td><td>310</td><td>19000</td></tr>
+            <tr><td><b>B 组</b> 转发 &lt; 30</td><td>9</td><td>11</td><td>620</td><td>7000</td></tr>
+          </tbody>
+        </table>
+        <p>需要说明样本边界：三个账号都在做本地生活内容，粉丝与发布时段相近，但 B 组条目少，单条异常值就能拉偏中位数。因此这条判断更适合当成待验证假设，不是定论。</p>
+
+        <h3>规则前后变化：10 月 28 日广告位拆分带来的口径错位</h3>
+        <p>10 月 28 日 VK Реклама 把短视频广告位拆成信息流与故事流后，后台的「播放」统计不再合并两栏。此前一个计划的总播放包含故事流自动播放，计入成本；拆分后故事流的自动播放单独显示，单位播放成本看起来上升，实际是把原先混在一起的口径分开了。拿 10 月 26 日和 10 月 30 日的同一计划截图对比，10 月 26 日显示播放 8.6 万、消耗 1.2 万卢布；10 月 30 日信息流播放 6.1 万、故事流 2.3 万，消耗仍是 1.2 万卢布。数字没变，分母的构成变了。</p>
+        <div class="callout"><b>核对方法：</b>打开 Реклама 后台 → 计划详情 → 日期范围选 10 月 26 日与 10 月 30 日各截一次图，比较「播放」列是否分栏。若你的账户未强制迁移，两天的数据不可直接相减。</div>
+
+        <h3>说法差异：TikTok 侧的完播口径与 VK 侧的转发口径</h3>
+        <p>10 月 31 日 TikTok 创作者后台改版后，「前 3 秒留存」成为首页指标，平均观看时长精确到秒。此前该指标藏在二级页，很多运营者按「平均观看时长」而不是「留存曲线」调内容。两个指标指向不同动作：留存低要改开场，时长短要改节奏。VK 侧则把好友转发放进信息流权重，2026 年 10 月 24 日的标签页语言过滤更新也影响了话题统计——同一话题下俄语与英语内容分开计数，跨语言账号的「话题热度」不再可直接比大小。</p>
+        <div class="quote">「那条转发 40、点赞 90 的菜谱视频，24 小时播放比我点赞 900 的探店高两倍。」<cite>——昵称 @lena_vk 的创作者，2026-10-18 在社群中的留言，转述，未独立核实</cite></div>
+
+        <h3>可反驳点与适用边界</h3>
+        <ul>
+          <li>若账号粉丝以陌生人为主（例如投放带来的粉丝占比超过 60%），关系链转发的作用会下降，此时完播率重新成为主信号。</li>
+          <li>转发数容易被「抽奖转发」拉高，需剔除带有奖励机制的条目；上述 42 条已排除 3 条抽奖内容。</li>
+          <li>不同内容类别的基线差异大：菜谱与本地生活转发天然高于美妆测评，跨类别比较无意义。</li>
+        </ul>
+        <p>把这些条件摆出来之后，判断收窄为：在粉丝以熟人关系为主的俄语生活方式账号里，转发对 24 小时曝光的拉动大于点赞。这个说法有样本、有时间、有可复现的取数路径，也留了被推翻的入口。</p>
+      </article>
+
+      <aside class="side" aria-label="本页导航与要点">
+        <div class="side-box">
+          <h3>本页导航</h3>
+          <nav aria-label="侧栏栏目导航">
+            <ul id="sideNav">
+              <li><a href="/#overview">平台概览</a></li>
+              <li><a href="/#pick">精选推荐</a></li>
+              <li><a href="/#news">最新更新</a></li>
+              <li><a href="/#channels">频道入口</a></li>
+              <li><a href="/#deep">深度解析</a></li>
+              <li><a href="/#guide">体验指南</a></li>
+              <li><a href="/#faq">常见问答</a></li>
+              <li><a href="/#rank">口碑榜单</a></li>
+              <li><a href="/#comments">用户评论</a></li>
+              <li><a href="/#related">相关资讯</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="side-box">
+          <h3>核对清单</h3>
+          <ul class="list" style="font-size:13.5px">
+            <li style="border-bottom:1px solid var(--line)"><span class="txt">10-26 与 10-30 计划截图</span></li>
+            <li style="border-bottom:1px solid var(--line)"><span class="txt">42 条竖屏内容原始数据</span></li>
+            <li style="border-bottom:1px solid var(--line)"><span class="txt">转发抽奖剔除名单</span></li>
+            <li><span class="txt">两账号粉丝来源占比</span></li>
+          </ul>
+        </div>
+        <div class="side-box">
+          <h3>相关推荐标签</h3>
+          <div class="tags">
+            <a href="/#deep">VK 信息流投放</a>
+            <a href="/#deep">TikTok 前 3 秒留存</a>
+            <a href="/#pick">竖屏去水印</a>
+            <a href="/#faq">跨境创作者结算</a>
+            <a href="/#news">广告位拆分</a>
+            <a href="/#rank">创作者口碑榜</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 06 体验指南 -->
+  <section class="sec" id="guide" aria-labelledby="h-guide">
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <h2 id="h-guide">体验指南：从零到第一条可投的素材</h2>
+      <span class="tagline">四步，每步有可提交物</span>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>确定主攻平台</h3>
+        <p>看目标受众语言与既有粉丝：俄语区优先 VK，东南亚与英语区优先 TikTok。两边都做时先给一边 4 周再开另一边。</p>
+      </div>
+      <div class="step">
+        <h3>开账号并完成验证</h3>
+        <p>VK 用可接收短信的电话号注册，补齐第二验证方式；TikTok 选目标市场邮箱，绑定手机号后再开广告账户，顺序反了会卡在审核。</p>
+      </div>
+      <div class="step">
+        <h3>准备 3 条测试素材</h3>
+        <p>同一内容做三种开场：动作中景、字幕前置、问题直述。每条 15–25 秒，去掉跨平台水印，封面单独设计。</p>
+      </div>
+      <div class="step">
+        <h3>按栏位拆分预算</h3>
+        <p>VK 信息流与故事流各给一半日预算，跑 48 小时看单位播放成本；TikTok 单条素材测试不低于 30 美元，未过留存阈值就停。</p>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:var(--gap)">
+      <div class="card">
+        <h3>VK 开户材料清单</h3>
+        <ul class="spec">
+          <li><span>企业主体证明</span><b>必需</b></li>
+          <li><span>联系人电话与邮箱</span><b>必需</b></li>
+          <li><span>税务属地声明</span><b>非居民需填</b></li>
+          <li><span>广告内容行业说明</span><b>医疗金融加审</b></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>TikTok Ads 开户顺序</h3>
+        <ul class="spec">
+          <li><span>账号 → 商务中心</span><b>先建</b></li>
+          <li><span>像素 → 事件</span><b>再装</b></li>
+          <li><span>支付方式</span><b>预付款 500 美元起</b></li>
+          <li><span>素材审核</span><b>通常 24 小时内</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 FAQ -->
+  <section class="sec" id="faq" aria-labelledby="h-faq">
+    <div class="sec-head">
+      <span class="sec-num">07</span>
+      <h2 id="h-faq">常见问答</h2>
+      <span class="tagline">五问，答案给到可执行的程度</span>
+    </div>
+    <details class="faq" open>
+      <summary>TikTok 与 VK 的账号注册门槛差在哪</summary>
+      <div class="ans">TikTok 需要目标市场的手机号或邮箱，部分地区对 SIM 归属地敏感，注册后 48 小时内频繁切换 IP 容易触发验证；VK 以电话号为主，海外号段可选，但俄罗斯本地号在找回密码时更顺。2026 年 10 月 VK 页面提示海外用户绑定第二验证方式，未绑定的账号在群聊里发言会被限速。</div>
+    </details>
+    <details class="faq">
+      <summary>TK 视频在 VK 二次分发会被限流吗</summary>
+      <div class="ans">平台没有公开的跨平台判别规则。可观测的现象是带 TikTok 水印的竖屏视频在 VK 信息流冷启动播放量偏低，去掉水印并换封面后部分账号播放回升。10 月 18 日那组 12 条样本里，去水印组 24 小时播放中位数 1.1 万，带水印组 0.46 万。样本小，不能当成限流证据。</div>
+    </details>
+    <details class="faq">
+      <summary>两个平台广告账户的起充金额</summary>
+      <div class="ans">TikTok Ads 在多数地区预付款 500 美元起，部分代理渠道可降到 200 美元但账期不同；VK Реклама 支持按天结算，最低日预算可设 300 卢布，实际投放中单条素材测试常按 1500 卢布起。换算成美元时注意卢布结算汇率按投放当天计算。</div>
+    </details>
+    <details class="faq">
+      <summary>跨境创作者结算用什么通道</summary>
+      <div class="ans">TikTok 创作者基金在部分市场走 PayPal 或银行转账；VK 对非居民多用电子钱包与本地银行卡，需同时核对收款主体的税务属地。以 1000 美元提现为样本，PayPal 路径手续费约 3.5% 加固定费，电子钱包路径费率低但到账按工作日计，10 月 16 日费率页更新后非居民账户多等 1–2 个工作日。</div>
+    </details>
+    <details class="faq">
+      <summary>VK 短视频的推荐权重靠什么</summary>
+      <div class="ans">完播率、评论互动和好友转发在 VK 信息流中的权重高于点赞。10 月 6 日至 10 月 20 日的样本里，转发数 40 的竖屏内容比点赞 900 的内容获得更多二次曝光；但这只在粉丝以熟人关系为主的账号里成立，投放带来的陌生粉丝占比高时，完播率重新成为主信号。</div>
+    </details>
+  </section>
+
+  <!-- 08 口碑榜单 -->
+  <section class="sec" id="rank" aria-labelledby="h-rank">
+    <div class="sec-head">
+      <span class="sec-num">08</span>
+      <h2 id="h-rank">口碑榜单：按落地难度排序的实操方向</h2>
+      <span class="tagline">难度与收益来自 11 月 1 日至 11 月 6 日的社群投票</span>
+    </div>
+    <div class="grid g2">
+      <ol class="rank">
+        <li><span><b>TikTok 前 3 秒重剪</b>改动集中在开场 0–1 秒，单条视频平均制作 40 分钟，样本账号留存提升 12 个百分点。</span></li>
+        <li><span><b>VK 信息流与故事流分栏测试</b>需要两份预算与两份素材，48 小时可出结论，适合已有广告账户的团队。</span></li>
+        <li><span><b>竖屏去水印与换封面</b>工具成本低，但要逐条重做封面，量大会卡在人力。</span></li>
+        <li><span><b>俄语字幕与配音</b>字幕字号与语速影响完播，找本地配音的成本按分钟计价。</span></li>
+        <li><span><b>群聊欢迎语承接</b>设置一次长期生效，二次打开率提升有限，适合做复购的账号。</span></li>
+      </ol>
+      <div class="card">
+        <h3>投票口径说明</h3>
+        <p>社群里 86 位参与者按「一周内能否独立完成」打分，1 分最易、5 分最难，排序取平均分从低到高。榜单不是效果排名，落地容易的方向不等于回报高。</p>
+        <p class="meta"><span class="chip">社群投票</span><span>11-01 至 11-06</span><span>86 份</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 用户评论 -->
+  <section class="sec" id="comments" aria-labelledby="h-comments">
+    <div class="sec-head">
+      <span class="sec-num">09</span>
+      <h2 id="h-comments">用户评论</h2>
+      <span class="tagline">有好评，也有不客气的</span>
+    </div>
+    <div class="comments">
+      <div class="cmt">
+        <span class="ref">指向：VK 广告位拆分后的出价方法</span>
+        <p>按分栏各给一半预算跑了两天，故事流的单位播放成本比信息流低 0.4 卢布，但订单没跟上。播放便宜不等于转化便宜，这条得补上。</p>
+        <div class="who"><span class="avatar">周</span><span>周启明 · 10-30</span></div>
+      </div>
+      <div class="cmt">
+        <span class="ref">指向：前 3 秒留存从 41% 到 58% 的剪辑改动</span>
+        <p>把字幕提前到 0.8 秒确实有效，我这边三条视频留存从 38% 涨到 51%。不过开场换成动作中景后，评论区在问「发生了什么」，反而多了互动。</p>
+        <div class="who"><span class="avatar a2">L</span><span>林小满 · 10-22</span></div>
+      </div>
+      <div class="cmt">
+        <p>整页看完，最有用的是那张 10 月 26 日和 30 日的截图对比。之前一直以为播放涨了，原来是故事流自动播放单独显示了。</p>
+        <div class="who"><span class="avatar a3">陈</span><span>陈默 · 11-02</span></div>
+      </div>
+      <div class="cmt">
+        <span class="ref">指向：去水印二次分发在 VK 的播放差异</span>
+        <p>12 条样本也太少了，而且三个账号里有一个粉丝才 5000，中位数被它拉低的可能性不小。结论我暂时不信。</p>
+        <div class="who"><span class="avatar a4">K</span><span>Kira_09 · 10-19</span></div>
+      </div>
+      <div class="cmt">
+        <span class="ref">指向：跨境创作者结算的成本差</span>
+        <p>PayPal 那条算得对，我 1000 美元提现到账 962 美元。电子钱包没试过，等费率页更新后再看。</p>
+        <div class="who"><span class="avatar">吴</span><span>吴迪 · 10-17</span></div>
+      </div>
+      <div class="cmt">
+        <p>频道入口那一栏有几个链接跳到同一段深度解析，点进去有点懵。分类可以再分细一点。</p>
+        <div class="who"><span class="avatar a2">何</span><span>何雨桐 · 11-06</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 相关资讯 -->
+  <section class="sec" id="related" aria-labelledby="h-related">
+    <div class="sec-head">
+      <span class="sec-num">10</span>
+      <h2 id="h-related">相关资讯与时间线</h2>
+      <span class="tagline">四个节点，按发生顺序</span>
+    </div>
+    <div class="grid g2">
+      <ol class="timeline">
+        <li><time datetime="2026-10-09">10 月 9 日</time>TikTok 账号资料页新增合作标签，品牌合作内容需在发布时勾选；未勾选的账号在 11 月 2 日的一次抽样中被降低推荐权重，平台未公开确认。</li>
+        <li><time datetime="2026-10-20">10 月 20 日</time>TikTok 部分地区测试评论区置顶商品链接，仅对开通小店且信用分达标的账号开放。</li>
+        <li><time datetime="2026-10-28">10 月 28 日</time>VK Реклама 短视频广告位拆分为信息流与故事流，历史计划需手动迁移，未迁移的计划保留原出价但不显示分栏数据。</li>
+        <li><time datetime="2026-11-05">11 月 5 日</time>TikTok Ads 东南亚竞价下限上调，越南与泰国市场单条素材测试预算从 20 美元提到 30 美元。</li>
+      </ol>
+      <div class="card">
+        <h3>待核实事项</h3>
+        <p>10 月 24 日 VK 标签页语言过滤上线后，同一话题的俄语与英语内容分开计数，跨语言账号的「话题热度」不能直接比大小。目前只有两位运营者提供了截图，平台帮助中心未更新说明。</p>
+        <p>10 月 31 日 TikTok 数据面板改版，平均观看时长改为秒级显示，旧报表的分钟级数据与新报表不可直接相减。</p>
+        <p class="meta"><span class="chip">转述</span><span>待平台文档确认</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 相关推荐 -->
+  <section class="sec" id="reco" aria-labelledby="h-reco">
+    <div class="sec-head">
+      <span class="sec-num">11</span>
+      <h2 id="h-reco">相关推荐：按搜索词直接找</h2>
+      <span class="tagline">标签索引，点开即达</span>
+    </div>
+    <div class="tags">
+      <a href="/#deep">VK 信息流投放</a>
+      <a href="/#deep">TikTok 前 3 秒留存</a>
+      <a href="/#pick">竖屏视频去水印</a>
+      <a href="/#guide">VK 广告账户开户</a>
+      <a href="/#guide">TikTok Ads 预付款</a>
+      <a href="/#faq">跨境创作者结算</a>
+      <a href="/#faq">VK 转发权重</a>
+      <a href="/#rank">创作者口碑榜</a>
+      <a href="/#news">广告位拆分</a>
+      <a href="/#comments">社群二次打开率</a>
+      <a href="/#pick">俄语字幕与配音</a>
+      <a href="/#related">标签页语言过滤</a>
+    </div>
+  </section>
+
+  <!-- 12 补充：创作者证言 -->
+  <section class="sec" id="voice" aria-labelledby="h-voice">
+    <div class="sec-head">
+      <span class="sec-num">12</span>
+      <h2 id="h-voice">创作者证言</h2>
+      <span class="tagline">三段原话，保留口语</span>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <p>「我们最开始把 TikTok 的素材原样搬到 VK，封面还带英文标题，结果播放卡在 2000。后来换成俄语封面、去掉水印，同样的视频跑到 1.8 万。」</p>
+        <p class="meta"><span class="chip">@ivan_video</span><span>10-18</span></p>
+      </div>
+      <div class="card">
+        <p>「Реклама 拆栏那天我还在跑旧计划，第二天数据全变样，差点以为账号出问题。后来把两栏分开建，才知道故事流一直在吃自动播放。」</p>
+        <p class="meta"><span class="chip">@sveta_ads</span><span>10-30</span></p>
+      </div>
+      <div class="card">
+        <p>「结算这块最麻烦的不是费率，是税务属地填错被退回。我第一次填了个人地址，第二次改企业地址才过，前后等了 11 天。」</p>
+        <p class="meta"><span class="chip">@mira_cross</span><span>10-12</span></p>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site" id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#ff5a7a"/>
+            <path d="M18 44V20h8l6 12 6-12h8v24h-6V30l-6 12h-4l-6-12v14z" fill="#101529"/>
+          </svg>
+          tk vk
+        </div>
+        <p>把两个短视频平台的后台变动、投放口径和结算细节放在一起核对，记录可复现的取数路径。</p>
+        <p>示例数据说明：页面中的账号昵称、样本数量与后台截图为演示用途，数值按垂类常见区间生成，引用前请以各自平台后台为准。</p>
+      </div>
+      <div>
+        <h3>内容栏目</h3>
+        <ul>
+          <li><a href="/#overview">平台概览</a></li>
+          <li><a href="/#pick">精选内容推荐</a></li>
+          <li><a href="/#news">最新更新</a></li>
+          <li><a href="/#channels">频道入口</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>实操栏目</h3>
+        <ul>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#rank">口碑榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>互动与归档</h3>
+        <ul>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#related">相关资讯</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+          <li><a href="/#voice">创作者证言</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 tk vk 内容整理 · 仅供运营参考</span>
+      <span>更新时间 2026-11-08 · 对应正文：东南亚竞价下限与广告位拆分两项</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=760){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('q');
+  var msg=document.getElementById('searchmsg');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var q=(input.value||'').trim().toLowerCase();
+      if(!q){msg.textContent='请输入关键词，例如「广告位」「结算」「留存」。';return;}
+      var nodes=document.querySelectorAll('main h2, main h3, main p, main li, main summary');
+      var hit=null,total=0;
+      nodes.forEach(function(n){
+        if(hit)return;
+        if(n.textContent.toLowerCase().indexOf(q)>-1){hit=n;}
+      });
+      nodes.forEach(function(n){if(n.textContent.toLowerCase().indexOf(q)>-1)total++;});
+      if(hit){
+        msg.textContent='找到 '+total+' 处匹配，已跳到第一处。';
+        hit.scrollIntoView({behavior:'smooth',block:'center'});
+        hit.style.transition='background .4s';
+        hit.style.background='#fff6d8';
+        setTimeout(function(){hit.style.background='';},1600);
+      }else{
+        msg.textContent='没有找到「'+input.value+'」。可试试：VK 广告位、前 3 秒留存、跨境结算、去水印。';
+      }
+    });
+  }
+  var topBtn=document.getElementById('toTop');
+  if(topBtn){
+    window.addEventListener('scroll',function(){
+      topBtn.classList.toggle('show',window.scrollY>600);
+    },{passive:true});
+    topBtn.addEventListener('click',function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  }
+  var links=[].slice.call(document.querySelectorAll('#sideNav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href').replace('/#','#'));});
+  function onScroll(){
+    var y=window.scrollY+140,idx=-1;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=y)idx=i;});
+    links.forEach(function(a,i){a.classList.toggle('on',i===idx);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+</body>
+              </html>
