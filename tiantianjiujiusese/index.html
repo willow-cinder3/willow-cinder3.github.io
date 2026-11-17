@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>天天久久涩涩日日-成人内容观察站</title>
+<meta name="description" content="天天久久涩涩日日是一个盘点成人向影像、番剧与阅读产品的观察站，梳理分区类目、更新节奏、会员付费差异与审核尺度变化，帮读者按更新时间与题材偏好挑内容。">
+<meta name="keywords" content="天天久久涩涩日日">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a1030'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ff5a7a' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23ffd166'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"天天久久涩涩日日","description":"成人向影像、番剧与阅读产品的类目盘点与更新观察","inLanguage":"zh-CN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"午夜分区与日间分区的内容差别在哪","acceptedAnswer":{"@type":"Answer","text":"日间分区只放经过二次审核的预告与花絮，午夜分区才上完整正片。2026年11月1日起，两个分区共用同一套年龄验证入口，但片源版本与时长不同，正片通常比预告多出完整剧情段。"}},
+{"@type":"Question","name":"会员档位按什么标准划分","acceptedAnswer":{"@type":"Answer","text":"目前分体验档、标准档与包厢档三档。体验档限每日观看60分钟，标准档解锁1080P与收藏夹，包厢档对应4K版本和提前48小时看更新，差异写在订阅页的对照表里。"}},
+{"@type":"Question","name":"番剧更新延迟一周是什么原因","acceptedAnswer":{"@type":"Answer","text":"海外版权方要求中文版延后上线。以《深夜放映室》第二季为例，日文原版10月24日播出，中文字幕版本11月1日才上架，间隔正好一周。"}},
+{"@type":"Question","name":"为什么有些条目突然下架","acceptedAnswer":{"@type":"Answer","text":"多与版权到期或审核尺度调整有关。10月28日一批2019年前的老片下架，平台公告只写版权变更，没有给出具体片单，读者可在收藏夹查看失效标记。"}},
+{"@type":"Question","name":"评论区截图能不能作为资源证据","acceptedAnswer":{"@type":"Answer","text":"截图只说明有人这样说过，不代表片源存在。判断资源状态要看平台上架页的版本号和更新日期，用户转述与官方公告应分开看。"}}
+]}
+</script>
+<style>
+:root{
+  --ink:#1b1220;--ink-2:#453048;--ink-3:#6f5a74;
+  --paper:#faf6f8;--paper-2:#f2e9ee;--line:#e2d4dc;
+  --brand:#8a1f4b;--brand-2:#c2315f;--accent:#e8a33d;
+  --ok:#2f7a5b;--warn:#a8501f;
+  --r-s:6px;--r-m:12px;--r-l:20px;
+  --sh-1:0 1px 2px rgba(27,18,32,.08),0 4px 14px rgba(27,18,32,.06);
+  --sh-2:0 8px 28px rgba(27,18,32,.12);
+  --sp-1:8px;--sp-2:14px;--sp-3:22px;--sp-4:34px;--sp-5:52px;
+  --font:system-ui,-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --serif:"Songti SC","Noto Serif SC",Georgia,serif;
+  --header-h:128px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0}
+p{margin:0 0 var(--sp-2)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--sp-3)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* 公告条 + 页头 吸顶 */
+.sticky-top{position:sticky;top:0;z-index:60}
+.notice{background:linear-gradient(90deg,#2a1030,#4a1230 60%,#6d1a3c);color:#fbe9f0;font-size:13.5px}
+.notice .wrap{display:flex;align-items:center;gap:10px;min-height:38px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.notice b{color:var(--accent)}
+.notice .tag{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:1px 9px;font-size:12px;letter-spacing:.5px}
+.notice a{color:#ffe0ea;text-decoration:underline}
+header.site{background:rgba(250,246,248,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);box-shadow:var(--sh-1)}
+.hbar{display:flex;align-items:center;gap:var(--sp-3);min-height:70px}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand svg{width:38px;height:38px}
+.brand .bt{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--ink);letter-spacing:.5px}
+nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+nav.main a{color:var(--ink-2);padding:7px 10px;border-radius:99px;font-size:14.5px}
+nav.main a:hover{background:var(--paper-2);text-decoration:none;color:var(--brand)}
+.head-tools{display:flex;align-items:center;gap:8px}
+.searchbox{display:flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:99px;padding:4px 6px 4px 12px}
+.searchbox input{border:0;outline:0;background:transparent;font:inherit;font-size:14px;width:150px;color:var(--ink)}
+.searchbox button{border:0;background:var(--brand);color:#fff;border-radius:99px;padding:6px 14px;cursor:pointer;font:inherit;font-size:14px}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:var(--r-s);padding:8px 12px;cursor:pointer;font:inherit;color:var(--ink);align-items:center;gap:6px}
+.menu-btn svg{width:18px;height:18px}
+.search-feedback{font-size:13.5px;color:var(--warn);padding:0 var(--sp-3) 8px;max-width:1180px;margin:0 auto}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;background:
+ radial-gradient(900px 420px at 82% -10%,rgba(194,49,95,.20),transparent 60%),
+ radial-gradient(700px 360px at 8% 110%,rgba(232,163,61,.16),transparent 60%),
+ linear-gradient(160deg,#20112a,#3a1236 55%,#2a1030);color:#f7ecf2;padding:var(--sp-5) 0 calc(var(--sp-5) + 8px)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:var(--sp-4);align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:2px;color:#ffd7e4;border:1px solid rgba(255,215,228,.35);border-radius:99px;padding:4px 14px;margin-bottom:var(--sp-2)}
+.hero h1{font-family:var(--serif);font-size:clamp(30px,4.6vw,50px);letter-spacing:1px;margin-bottom:var(--sp-2);color:#fff}
+.hero .lede{color:#e7cfda;font-size:16.5px;max-width:40em}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:var(--sp-3)}
+.btn{display:inline-block;padding:11px 22px;border-radius:99px;font-weight:600;font-size:15px}
+.btn.primary{background:linear-gradient(135deg,var(--brand-2),#e2466f);color:#fff;box-shadow:0 6px 20px rgba(194,49,95,.4)}
+.btn.primary:hover{text-decoration:none;transform:translateY(-2px)}
+.btn.ghost{border:1px solid rgba(255,255,255,.4);color:#fff}
+.btn.ghost:hover{text-decoration:none;background:rgba(255,255,255,.1)}
+.hero-stats{display:flex;gap:var(--sp-3);margin-top:var(--sp-4);flex-wrap:wrap}
+.hero-stats div{min-width:92px}
+.hero-stats strong{display:block;font-size:26px;font-family:var(--serif);color:var(--accent)}
+.hero-stats span{font-size:12.5px;color:#d9bfca}
+.hero-art{position:relative;aspect-ratio:1/1;max-width:340px;justify-self:end;width:100%}
+.hero-art svg{width:100%;height:100%}
+.hero-art .ring{animation:spin 26s linear infinite;transform-origin:160px 160px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* 主内容区：双栏 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:var(--sp-4);padding:var(--sp-5) 0}
+main{min-width:0}
+aside.stick{position:sticky;top:calc(var(--header-h) + 12px);align-self:start}
+section.block{margin-bottom:var(--sp-5);scroll-margin-top:calc(var(--header-h) + 14px)}
+.sec-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:var(--sp-3);border-bottom:2px solid var(--line);padding-bottom:10px}
+.sec-head h2{font-size:22px;font-family:var(--serif);letter-spacing:.5px}
+.sec-head .sub{font-size:13px;color:var(--ink-3)}
+.sec-head .more{margin-left:auto;font-size:13.5px}
+
+/* 概览 */
+.overview{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2)}
+.ov-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:var(--sp-3);box-shadow:var(--sh-1)}
+.ov-card h3{font-size:16px;margin-bottom:6px}
+.ov-card p{font-size:14.5px;color:var(--ink-2);margin:0}
+.ov-card .num{font-family:var(--serif);font-size:24px;color:var(--brand);display:block;margin-bottom:2px}
+
+/* 精选三卡 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-3)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--sh-1);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh-2)}
+.card img{width:100%;height:150px;object-fit:cover}
+.card .body{padding:14px 16px 16px}
+.card .meta{font-size:12.5px;color:var(--ink-3);display:flex;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.card h3{font-size:16.5px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--ink-2);margin:0}
+.badge{display:inline-block;font-size:11.5px;padding:1px 8px;border-radius:99px;background:var(--paper-2);color:var(--brand);border:1px solid var(--line)}
+
+/* 最新更新 紧凑列表 */
+.updates{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:var(--r-m);background:#fff;overflow:hidden}
+.updates li{display:grid;grid-template-columns:86px 1fr auto;gap:12px;align-items:baseline;padding:12px 16px;border-bottom:1px dashed var(--line);font-size:14.5px}
+.updates li:last-child{border-bottom:0}
+.updates time{font-size:12.5px;color:var(--brand-2);font-weight:600;font-variant-numeric:tabular-nums}
+.updates .t{color:var(--ink-3);font-size:12.5px;white-space:nowrap}
+
+/* 分类入口 标签索引 */
+.tagcloud{display:flex;flex-wrap:wrap;gap:10px}
+.tagcloud a{display:inline-block;padding:8px 15px;border-radius:99px;background:#fff;border:1px solid var(--line);font-size:14px;color:var(--ink-2);box-shadow:var(--sh-1)}
+.tagcloud a:hover{background:var(--brand);color:#fff;border-color:var(--brand);text-decoration:none}
+.tagcloud a small{opacity:.6;margin-left:4px;font-size:12px}
+
+/* 深度解析 分栏正文 */
+.deep{background:#fff;border:1px solid var(--line);border-radius:var(--r-l);padding:var(--sp-4);box-shadow:var(--sh-1)}
+.deep .lead{font-size:16.5px;color:var(--ink-2);border-left:4px solid var(--brand-2);padding-left:16px;margin-bottom:var(--sp-3);background:var(--paper);border-radius:0 var(--r-s) var(--r-s) 0;padding-top:10px;padding-bottom:10px}
+.deep h3{font-size:17.5px;margin:var(--sp-3) 0 8px;color:var(--brand)}
+.deep .cols{column-count:2;column-gap:var(--sp-4);column-rule:1px solid var(--line)}
+.deep .cols p{break-inside:avoid;font-size:14.5px}
+.quote-card{margin:var(--sp-3) 0;padding:18px 20px;background:var(--paper-2);border-radius:var(--r-m);font-family:var(--serif);font-size:16px;color:var(--ink);border:1px solid var(--line)}
+.quote-card cite{display:block;font-style:normal;font-size:13px;color:var(--ink-3);margin-top:8px;font-family:var(--font)}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0 var(--sp-2)}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.cmp th{background:var(--paper-2);font-weight:600;color:var(--ink)}
+table.cmp td{color:var(--ink-2)}
+.factbox{border:1px solid var(--line);border-radius:var(--r-m);padding:14px 16px;background:#fdfafc;margin:12px 0}
+.factbox h4{font-size:14.5px;color:var(--warn);margin-bottom:6px}
+.factbox ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2)}
+.factbox li{margin-bottom:4px}
+
+/* 体验指南 编号步骤 */
+.steps{counter-reset:st;list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.steps li{position:relative;padding:14px 16px 14px 58px;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);font-size:14.5px;color:var(--ink-2)}
+.steps li::before{counter-increment:st;content:counter(st);position:absolute;left:14px;top:13px;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.steps li b{color:var(--ink)}
+
+/* FAQ */
+details.faq{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:0;margin-bottom:10px;overflow:hidden}
+details.faq summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:15px;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--brand-2);font-size:20px;line-height:1;font-weight:400}
+details.faq[open] summary::after{content:"–"}
+details.faq .ans{padding:0 18px 16px;font-size:14.5px;color:var(--ink-2)}
+
+/* 评论 */
+.comments{display:grid;gap:var(--sp-2)}
+.cmt{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand-2);border-radius:var(--r-m);padding:14px 16px}
+.cmt .who{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-3);margin-bottom:6px}
+.cmt .who .av{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700}
+.cmt p{font-size:14.5px;color:var(--ink-2);margin:0}
+.cmt .ref{display:inline-block;margin-top:6px;font-size:12.5px;color:var(--brand)}
+
+/* 资讯 双栏 */
+.news{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)}
+.news .item{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:16px 18px;box-shadow:var(--sh-1)}
+.news .item h3{font-size:15.5px;margin-bottom:6px}
+.news .item p{font-size:14px;color:var(--ink-2);margin:0}
+.news .item time{font-size:12.5px;color:var(--brand-2);font-weight:600}
+
+/* 榜单 */
+.rank{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden}
+.rank ol{list-style:none;margin:0;padding:0;counter-reset:rk}
+.rank li{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:14.5px}
+.rank li:last-child{border-bottom:0}
+.rank li::before{counter-increment:rk;content:counter(rk,decimal-leading-zero);font-family:var(--serif);color:var(--brand-2);font-size:17px;width:28px}
+.rank li .sc{margin-left:auto;color:var(--ink-3);font-size:13px;font-variant-numeric:tabular-nums}
+
+/* 相关推荐 */
+.reco{display:flex;flex-wrap:wrap;gap:10px}
+.reco a{padding:9px 16px;border:1px dashed var(--brand-2);border-radius:var(--r-s);font-size:14px;color:var(--brand)}
+.reco a:hover{background:var(--brand);color:#fff;text-decoration:none;border-style:solid}
+
+/* 时间线 */
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 18px 14px;font-size:14.5px;color:var(--ink-2)}
+.tl li::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:3px solid var(--brand-2)}
+.tl b{color:var(--ink)}
+.tl time{display:block;font-size:12.5px;color:var(--brand-2);font-weight:600}
+
+/* 侧栏 */
+aside .box{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:16px 18px;margin-bottom:var(--sp-3);box-shadow:var(--sh-1)}
+aside .box h3{font-size:15px;margin-bottom:10px;color:var(--brand)}
+aside nav.side{display:flex;flex-direction:column;gap:2px}
+aside nav.side a{font-size:14px;padding:7px 10px;border-radius:var(--r-s);color:var(--ink-2);border-left:3px solid transparent}
+aside nav.side a:hover{background:var(--paper-2);text-decoration:none}
+aside nav.side a.active{background:var(--paper-2);color:var(--brand);border-left-color:var(--brand-2);font-weight:600}
+aside .mini{list-style:none;margin:0;padding:0;font-size:13.5px}
+aside .mini li{padding:7px 0;border-bottom:1px dashed var(--line);color:var(--ink-2)}
+aside .mini li:last-child{border-bottom:0}
+aside .mini b{color:var(--brand-2);font-weight:600}
+
+/* 页尾 */
+footer.site{background:#1b1220;color:#cdbcc4;padding:var(--sp-5) 0 var(--sp-3);margin-top:var(--sp-3)}
+footer.site .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--sp-4)}
+footer.site h4{color:#fff;font-size:14.5px;margin-bottom:10px}
+footer.site .fbrand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+footer.site .fbrand .bt{font-family:var(--serif);font-size:18px;color:#fff;font-weight:700}
+footer.site p{font-size:13.5px;color:#b39fab;line-height:1.8}
+footer.site ul{list-style:none;margin:0;padding:0;font-size:13.5px}
+footer.site ul li{margin-bottom:7px}
+footer.site a{color:#dcc6d1}
+footer.site a:hover{color:#fff}
+footer .note{font-size:12.5px;color:#8f7c88;border-top:1px solid #332535;margin-top:var(--sp-4);padding-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* 回到顶部 */
+#toTop{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:50%;border:0;background:var(--brand);color:#fff;box-shadow:var(--sh-2);cursor:pointer;display:none;place-items:center;z-index:70}
+#toTop.show{display:grid}
+#toTop svg{width:20px;height:20px}
+
+/* 响应式 */
+@media(max-width:960px){
+  .layout{grid-template-columns:1fr}
+  aside.stick{position:static;order:2}
+  .grid3{grid-template-columns:1fr 1fr}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{max-width:240px;justify-self:start;order:-1}
+  .deep .cols{column-count:1}
+  footer.site .fgrid{grid-template-columns:1fr 1fr}
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:10px 16px 16px;border-bottom:1px solid var(--line);box-shadow:var(--sh-2);gap:2px}
+  nav.main.open{display:flex}
+  header.site{position:relative}
+  .menu-btn{display:inline-flex}
+  .searchbox input{width:110px}
+}
+@media(max-width:640px){
+  .grid3{grid-template-columns:1fr}
+  .overview{grid-template-columns:1fr}
+  .news{grid-template-columns:1fr}
+  .updates li{grid-template-columns:74px 1fr;row-gap:2px}
+  .updates .t{grid-column:2}
+  .hero{padding:var(--sp-4) 0}
+  .hero-stats{gap:var(--sp-2)}
+  .deep{padding:18px 16px}
+  footer.site .fgrid{grid-template-columns:1fr}
+  .head-tools{width:100%}
+  .searchbox{flex:1}
+  .searchbox input{width:100%}
+  .hbar{flex-wrap:wrap;padding:10px 0;gap:10px}
+  :root{--header-h:150px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="notice" role="region" aria-label="站内公告">
+    <div class="wrap">
+      <span class="tag">公告</span>
+      <span>天天久久涩涩日日 <b>11月6日</b> 更新午夜分区片单，新增 14 部正片、下架 3 部2019年前老片，会员包厢档同步开放4K版本。</span>
+      <a href="/#updates">查看更新清单</a>
+    </div>
+  </div>
+  <header class="site">
+    <div class="wrap hbar">
+      <a class="brand" href="/#hero" aria-label="返回首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#2a1030"/>
+          <circle cx="32" cy="32" r="15" fill="none" stroke="#ff5a7a" stroke-width="5"/>
+          <circle cx="32" cy="32" r="5" fill="#ffd166"/>
+        </svg>
+        <span class="bt">天天久久涩涩日日</span>
+      </a>
+      <div class="head-tools">
+        <form class="searchbox" role="search" id="searchForm">
+          <label for="q" class="sr-only">搜索站内条目</label>
+          <input id="q" type="search" placeholder="搜片名、番剧、专栏" autocomplete="off">
+          <button type="submit">查找</button>
+        </form>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          菜单
+        </button>
+      </div>
+      <nav class="main" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">分区概览</a>
+        <a href="/#picks">本周精选</a>
+        <a href="/#updates">更新动态</a>
+        <a href="/#cats">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#rank">热门榜单</a>
+      </nav>
+    </div>
+    <div class="search-feedback" id="searchFeedback" hidden></div>
+  </header>
+</div>
+
+<div class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">午夜分区 · 更新观察</span>
+      <h1>天天久久涩涩日日</h1>
+      <p class="lede">按更新节奏与题材偏好挑选成人向影像、番剧和有声阅读产品。站点整理的 6 个分区、118 个条目，本月进入集中更新期，重点看版本差异和审核口径，而不是封面。日间能看到的预告与午夜上架的完整正片，往往是两个版本。</p>
+      <div class="cta">
+        <a class="btn primary" href="/#picks">看本周精选</a>
+        <a class="btn ghost" href="/#deep">读分区与审核解析</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>6</strong><span>内容分区</span></div>
+        <div><strong>118</strong><span>在架条目</span></div>
+        <div><strong>14</strong><span>本周新增正片</span></div>
+        <div><strong>3</strong><span>会员档位</span></div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 320 320">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff5a7a"/><stop offset="1" stop-color="#e8a33d"/>
+          </linearGradient>
+        </defs>
+        <circle cx="160" cy="160" r="130" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+        <circle cx="160" cy="160" r="100" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <g class="ring">
+          <circle cx="160" cy="160" r="112" fill="none" stroke="url(#g1)" stroke-width="3" stroke-dasharray="10 18" stroke-linecap="round"/>
+          <circle cx="160" cy="48" r="7" fill="#ffd166"/>
+          <circle cx="272" cy="160" r="5" fill="#ff5a7a"/>
+          <circle cx="160" cy="272" r="6" fill="#f7ecf2"/>
+        </g>
+        <circle cx="160" cy="160" r="58" fill="url(#g1)" opacity=".9"/>
+        <circle cx="160" cy="160" r="22" fill="#2a1030"/>
+        <circle cx="160" cy="160" r="8" fill="#ffd166"/>
+        <g stroke="rgba(255,255,255,.5)" stroke-width="1.5">
+          <path d="M40 160h34M246 160h34M160 40v34M160 246v34"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+<main>
+
+  <!-- 领域概览 -->
+  <section class="block" id="overview">
+    <div class="sec-head">
+      <h2>分区概览：六类内容与它们的审核口径</h2>
+      <span class="sub">截至 2026-11-08</span>
+    </div>
+    <div class="overview">
+      <div class="ov-card">
+        <span class="num">02</span>
+        <h3>剧情正片区</h3>
+        <p>以 40—90 分钟的独立剧情片为主，镜头完整、字幕通常带时间轴。日间仅放预告，完整正片在午夜分区，两版本时长差 12—25 分钟。</p>
+      </div>
+      <div class="ov-card">
+        <span class="num">01</span>
+        <h3>深夜番剧区</h3>
+        <p>分日本原版与中文配音两轨，《深夜放映室》第二季中文版比原版晚 7 天。部分番剧按季度拆成 12 集，单集 24 分钟。</p>
+      </div>
+      <div class="ov-card">
+        <span class="num">03</span>
+        <h3>有声阅读区</h3>
+        <p>以广播剧和有声小说为主，单集 18—35 分钟。《电车末班》广播剧第一季 10 集，11月3日发布完结篇，评论区对结尾处理有分歧。</p>
+      </div>
+      <div class="ov-card">
+        <span class="num">04</span>
+        <h3>写真图集区</h3>
+        <p>静态图集与套图，单套 30—80 张，按拍摄地和主题归档。10月31日上架的一批户外套图因色彩校对问题被作者本人下架重传。</p>
+      </div>
+      <div class="ov-card">
+        <span class="num">05</span>
+        <h3>短视频片段区</h3>
+        <p>30 秒到 3 分钟的剪辑片段，多数是正片的预告切片，部分为创作者二次剪辑。片段不能当完整版看，版权页会标原始出处。</p>
+      </div>
+      <div class="ov-card">
+        <span class="num">06</span>
+        <h3>创作者专栏区</h3>
+        <p>拍摄手记、幕后访谈与设备清单。11月2日上线的《布光三件事》专栏拆解了三部正片的灯光方案，含参数截图。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选推荐 -->
+  <section class="block" id="picks">
+    <div class="sec-head">
+      <h2>本周精选：三个值得先看的条目</h2>
+      <a class="more" href="/#updates">全部更新 →</a>
+    </div>
+    <div class="grid3">
+      <article class="card">
+        <img src="https://picsum.photos/seed/midnight-ward/560/320" width="560" height="320" loading="lazy" alt="午夜病栋剧情片海报，冷色调走廊与门牌特写" style="object-fit:cover">
+        <div class="body">
+          <div class="meta"><span class="badge">剧情正片</span><span>11月5日上架</span></div>
+          <h3>《午夜病栋》第三话</h3>
+          <p>连载到第三话，本话时长 72 分钟，比前一话多出 9 分钟的夜班交接戏。中文字幕由站内译者「灯泡」校对，片尾标注了修订版号 v2.1。</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/night-theater/560/320" width="560" height="320" loading="lazy" alt="深夜放映室番剧场景，旧影院座椅与投影光斑" style="object-fit:cover">
+        <div class="body">
+          <div class="meta"><span class="badge">深夜番剧</span><span>11月1日上架</span></div>
+          <h3>《深夜放映室》第二季中文版</h3>
+          <p>日文原版 10月24日播出，中文版 11月1日上线，间隔 7 天。第二集保留了原版的 3 段独白，配音演员换成了「南屿」，评论区对新声线评价两极。</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/seed/tram-audio/560/320" width="560" height="320" loading="lazy" alt="电车末班广播剧封面，夜间电车车厢与窗外灯光" style="object-fit:cover">
+        <div class="body">
+          <div class="meta"><span class="badge">有声广播剧</span><span>11月3日完结</span></div>
+          <h3>《电车末班》广播剧第一季</h3>
+          <p>10 集收官，第 10 集 34 分钟。结尾把原作小说第 4 章的独白改成了双人对白，制作组在专栏《布光三件事》里解释过这次改动。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="block" id="updates">
+    <div class="sec-head">
+      <h2>最新更新：10 条可核对的条目变动</h2>
+      <span class="sub">日期均在 2026-10-09 至 2026-11-08 之间</span>
+    </div>
+    <ul class="updates">
+      <li><time datetime="2026-11-08">今天</time><span>《午夜病栋》第三话 修正字幕错字，版本号升至 v2.2</span><span class="t">剧情正片</span></li>
+      <li><time datetime="2026-11-07">昨天</time><span>《深夜放映室》第二季第二集 上线中文配音轨</span><span class="t">深夜番剧</span></li>
+      <li><time datetime="2026-11-06">11月6日</time><span>午夜分区新增 14 部正片，下架 3 部 2019 年前老片</span><span class="t">分区变动</span></li>
+      <li><time datetime="2026-11-05">11月5日</time><span>《午夜病栋》第三话 上架，时长 72 分钟</span><span class="t">剧情正片</span></li>
+      <li><time datetime="2026-11-03">11月3日</time><span>《电车末班》广播剧第一季 第 10 集完结</span><span class="t">有声广播剧</span></li>
+      <li><time datetime="2026-11-02">11月2日</time><span>创作者专栏《布光三件事》上线，含三份灯位图</span><span class="t">创作者专栏</span></li>
+      <li><time datetime="2026-11-01">11月1日</time><span>年龄验证入口统一，日间与午夜分区共用一个入口</span><span class="t">规则调整</span></li>
+      <li><time datetime="2026-10-31">10月31日</time><span>户外写真套图因色彩校对问题由作者下架重传</span><span class="t">写真图集</span></li>
+      <li><time datetime="2026-10-28">10月28日</time><span>一批 2019 年前老片下架，平台公告只写版权变更</span><span class="t">版权变动</span></li>
+      <li><time datetime="2026-10-24">10月24日</time><span>《深夜放映室》第二季日文原版首播</span><span class="t">深夜番剧</span></li>
+    </ul>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="block" id="cats">
+    <div class="sec-head">
+      <h2>分类入口：按题材与时长筛条目</h2>
+      <span class="sub">括号内为在架数量</span>
+    </div>
+    <div class="tagcloud">
+      <a href="/#picks">剧情长片<small>32</small></a>
+      <a href="/#picks">深夜番剧<small>24</small></a>
+      <a href="/#picks">有声广播剧<small>19</small></a>
+      <a href="/#picks">写真套图<small>21</small></a>
+      <a href="/#picks">短视频切片<small>16</small></a>
+      <a href="/#picks">幕后访谈<small>8</small></a>
+      <a href="/#picks">布光手记<small>5</small></a>
+      <a href="/#picks">原声配乐<small>7</small></a>
+      <a href="/#picks">4K修复版<small>6</small></a>
+      <a href="/#picks">中文字幕轨<small>11</small></a>
+      <a href="/#picks">配音演员访谈<small>4</small></a>
+      <a href="/#picks">季度合集<small>9</small></a>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="block" id="deep">
+    <div class="sec-head">
+      <h2>深度解析：今夜该看正片还是看预告</h2>
+      <span class="sub">全页唯一长篇阅读区</span>
+    </div>
+    <article class="deep">
+      <p class="lead">核心判断：日间分区的预告与午夜分区的正片，差的不只是十几分钟时长，而是审核链条不同。日间内容要过两道人工复核，午夜只过一道，所以同一部片在两边呈现的画面与台词并不一致，拿预告去判断正片值不值得看，会系统性地误判。</p>
+
+      <h3>一、两个版本的实际差异：以《午夜病栋》第三话为例</h3>
+      <div class="cols">
+        <p>《午夜病栋》第三话日间预告版 51 分钟，午夜正片版 72 分钟，差 21 分钟。差的不是片头片尾，而是三段夜班交接戏和一段走廊长镜头。站内译者「灯泡」在专栏里列过对照清单：第 17 分钟、第 33 分钟、第 58 分钟各有一处删改，前两处删的是对白，第三处是整段画面替换。</p>
+        <p>这意味着预告版的叙事是断的。观众反映最多的是「第三话看不懂为什么护士突然换班」，原因就在这里。正片 v2.1 补回了 9 分钟交接戏，v2.2 只修了字幕错字，画面没动。版本号写在上架页右下方，不在封面。判断某一版是否改动，看版本号和更新日期比看评论区可靠。</p>
+        <p>《深夜放映室》第二季是另一种情况。日文原版和中文版差 7 天，但两个版本的画面完全相同，差异只在配音轨和字幕。也就是说，它不是审核剪出来的时长差，而是版权方要求的窗口期。把这两种延迟混为一谈，是评论区争论里的常见错误。</p>
+      </div>
+      <div class="quote-card">
+        “第三话我看了两遍才对上人物关系，第一遍看的预告版，第二遍正片版，中间那 21 分钟全是对白。”
+        <cite>—— 评论者「夜班观察」，11月6日，指向《午夜病栋》第三话</cite>
+      </div>
+
+      <h3>二、三档会员的差异，哪些是真差别，哪些是包装</h3>
+      <table class="cmp">
+        <thead><tr><th>档位</th><th>观看限制</th><th>画质</th><th>更新优先级</th><th>实际差别</th></tr></thead>
+        <tbody>
+          <tr><td>体验档</td><td>每日 60 分钟</td><td>720P</td><td>同步</td><td>时长限制是真门槛，720P 在大屏上明显</td></tr>
+          <tr><td>标准档</td><td>不限</td><td>1080P</td><td>同步</td><td>解锁收藏夹与进度同步，性价比最高</td></tr>
+          <tr><td>包厢档</td><td>不限</td><td>4K</td><td>提前 48 小时</td><td>4K 片源目前只覆盖 6 部，提前量对番剧无效</td></tr>
+        </tbody>
+      </table>
+      <p>实测 11月6日新增的 14 部正片中，只有 2 部提供 4K，包厢档的「4K 版本」宣传与实际覆盖面对不上。提前 48 小时这条权益在番剧区不生效，因为番剧上线时间由版权方定。这两点是判断订阅值的硬指标，比「超清」「尊享」这类词有用。</p>
+
+      <h3>三、口径变化：10月28日下架与11月1日验证入口</h3>
+      <div class="factbox">
+        <h4>把说法拆开看</h4>
+        <ul>
+          <li><b>事实：</b>10月28日一批 2019 年前老片下架，平台公告写「版权变更」，未公布片单。</li>
+          <li><b>官方回应：</b>11月1日统一年龄验证入口，日间与午夜共用一个入口，公告称「便于管理」。</li>
+          <li><b>用户转述：</b>评论区有人说下架是因为「新规」，该说法没有公告支持，属于猜测。</li>
+          <li><b>推测：</b>验证入口统一后，日间分区的可搜索范围可能收窄，但目前没有条目消失的证据。</li>
+        </ul>
+      </div>
+      <p>下架与验证入口这两件事在时间上挨着，被不少人串成因果。可核对的部分是：10月28日公告只有一句话，11月1日入口调整的公告里没提下架。两件事各自独立成立，把它们连起来的是读者自己补的链条。这种区分在选片时有用——如果以为日间全面收窄，就会错过 11月5日仍在正常上架的《午夜病栋》预告。</p>
+
+      <h3>四、可反驳的判断：预算高的片，删改反而更多</h3>
+      <p>一个反直觉的观察：制作预算越高的正片，午夜与日间版本的差异越大。本周 14 部新片里，预算标注为「高」的 3 部平均差 18 分钟，预算「中低」的 11 部平均差 5 分钟。理由不复杂，高预算片的镜头调度复杂、长镜头多，一段画面替换牵动的连续性更大，审核剪起来只能整段拿掉。</p>
+      <p>这个判断可以被反驳：样本只有一周 14 部，且「预算」是平台自标，不是独立数据。若下一周低预算片的差异反超，这条就得改。给出判断的同时保留推翻它的条件，比只抛结论更可靠。</p>
+    </article>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="block" id="guide">
+    <div class="sec-head">
+      <h2>体验指南：五步筛出值得看的条目</h2>
+      <span class="sub">按顺序做，能省掉大半试错</span>
+    </div>
+    <ol class="steps">
+      <li><b>先看版本号与更新日期。</b>上架页右下方有一行小字，标 v2.x 和具体日期。同一部片两个版本号并存，说明改过，改了什么要去专栏找对照清单。</li>
+      <li><b>分清预告版和正片版。</b>日间搜到的大多是预告版，时长比正片短 12—25 分钟。《午夜病栋》第三话就是 51 分钟对 72 分钟。</li>
+      <li><b>番剧查原版播出时间。</b>日文原版和中文版通常差 7 天，这个间隔是版权窗口期，不是审核。急着看可以对照原版播出日期判断进度。</li>
+      <li><b>会员先看 4K 覆盖。</b>11月6日新增 14 部里只有 2 部有 4K。为 4K 订包厢档之前，先确认想看的条目在不在覆盖范围内。</li>
+      <li><b>广播剧听完结集再决定。</b>《电车末班》第一季 10 集于 11月3日完结，完结后一次性听，比追更更容易判断声线与改编是否合口味。</li>
+    </ol>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="sec-head">
+      <h2>常见问答：分区、会员与下架的六个问题</h2>
+    </div>
+    <details class="faq">
+      <summary>午夜分区与日间分区的内容差别在哪</summary>
+      <div class="ans">日间分区只放经过二次复核的预告与花絮，午夜分区才上完整正片。11月1日起两个分区共用一个年龄验证入口，但片源版本与时长不同，《午夜病栋》第三话差 21 分钟。</div>
+    </details>
+    <details class="faq">
+      <summary>会员档位按什么标准划分</summary>
+      <div class="ans">体验档、标准档、包厢档三档。体验档限每日观看 60 分钟，标准档解锁 1080P 与收藏夹，包厢档对应 4K 与提前 48 小时。4K 片源目前只覆盖 6 部，11月6日新增的 14 部里仅 2 部有。</div>
+    </details>
+    <details class="faq">
+      <summary>番剧更新延迟一周是什么原因</summary>
+      <div class="ans">海外版权方要求的窗口期。《深夜放映室》第二季日文原版 10月24日播出，中文版 11月1日上线，间隔 7 天。画面两端一致，差异只在配音轨与字幕，不属于审核删改。</div>
+    </details>
+    <details class="faq">
+      <summary>为什么有些条目突然下架</summary>
+      <div class="ans">10月28日一批 2019 年前老片下架，公告写「版权变更」，没有公布片单。收藏夹里会留下失效标记，可据此核对具体是哪些条目。把这件事和 11月1日的验证入口调整连成因果，目前没有公告支持。</div>
+    </details>
+    <details class="faq">
+      <summary>《电车末班》广播剧结尾改成双人对白，合理吗</summary>
+      <div class="ans">制作组在《布光三件事》专栏里说明过，改成对白是为了让第 10 集的 34 分钟收得更紧。原作小说第 4 章是独白，情感落点不同，评论区分歧主要集中在这里。</div>
+    </details>
+    <details class="faq">
+      <summary>评论区截图能不能当资源存在的证据</summary>
+      <div class="ans">截图只说明有人这样说过。判断资源状态看平台上架页的版本号和更新日期，用户转述与官方公告要分开看。11月6日那批下架条目就有截图在传，但公告没给片单。</div>
+    </details>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="block" id="comments">
+    <div class="sec-head">
+      <h2>用户评论：六条来自具体条目的反馈</h2>
+      <span class="sub">语气不一，含中性意见</span>
+    </div>
+    <div class="comments">
+      <div class="cmt">
+        <div class="who"><span class="av">夜</span>夜班观察 · 11月6日</div>
+        <p>《午夜病栋》第三话我看了两遍才对上人物关系。预告版 51 分钟，正片 72 分钟，中间那段交接戏是补回来的，删了以后护士换班完全没交代。</p>
+        <span class="ref">指向：午夜病栋 第三话</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">灯</span>灯泡的听众 · 11月7日</div>
+        <p>《深夜放映室》第二季换配音后，第二集那三段独白的气口不一样了。南屿的声线更平，跟原版比少了点压着的情绪，但字幕这次做得干净。</p>
+        <span class="ref">指向：深夜放映室 第二季</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">末</span>末班乘客 · 11月4日</div>
+        <p>《电车末班》第 10 集把独白改成对白，我不太买账。34 分钟里前 20 分钟节奏很好，最后那段两个人一来一回，反而把原作那种一个人扛着的劲卸掉了。</p>
+        <span class="ref">指向：电车末班 第一季</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">路</span>路人甲 · 11月3日</div>
+        <p>包厢档说 4K，翻了半天 11月6日新增的 14 部只有 2 部是 4K。提前 48 小时在番剧区也不生效，这两条权益页面写得太含糊。</p>
+        <span class="ref">指向：会员权益页面</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">色</span>色彩校对员 · 11月1日</div>
+        <p>10月31日下架重传的那批户外套图，重传后偏青的问题改掉了，但有几张构图裁得比原版紧。作者在专栏里提过一句，没细说。</p>
+        <span class="ref">指向：户外写真套图</span>
+      </div>
+      <div class="cmt">
+        <div class="who"><span class="av">B</span>布光爱好者 · 11月2日</div>
+        <p>《布光三件事》里的灯位图参数能对上《午夜病栋》第三话第 58 分钟那段走廊，这个对照做得实在。不过三份灯位图只覆盖了两部片。</p>
+        <span class="ref">指向：创作者专栏 布光三件事</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="block" id="news">
+    <div class="sec-head">
+      <h2>相关资讯：四条时间点明确的变动</h2>
+    </div>
+    <div class="news">
+      <div class="item">
+        <time datetime="2026-11-06">11月6日</time>
+        <h3>午夜分区片单更新，新增 14 部下架 3 部</h3>
+        <p>新增片单里有 2 部标 4K，其余为 1080P。下架的 3 部都是 2019 年前老片，收藏夹已标失效。</p>
+      </div>
+      <div class="item">
+        <time datetime="2026-11-01">11月1日</time>
+        <h3>年龄验证入口合并为一个</h3>
+        <p>日间与午夜共用同一入口，公告称便于管理。截至 11月8日，日间可搜索条目数量未见明显减少。</p>
+      </div>
+      <div class="item">
+        <time datetime="2026-10-28">10月28日</time>
+        <h3>一批老片下架，公告只写版权变更</h3>
+        <p>平台未公布片单，评论区流传的名单未获证实。核对方式看收藏夹失效标记。</p>
+      </div>
+      <div class="item">
+        <time datetime="2026-10-24">10月24日</time>
+        <h3>《深夜放映室》第二季原版首播</h3>
+        <p>中文版 11月1日上线，间隔 7 天。第二集配音更换为本季新加入的南屿。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="block" id="rank">
+    <div class="sec-head">
+      <h2>本周热度榜：按站内收藏数排</h2>
+      <span class="sub">统计区间 11月1日—11月8日</span>
+    </div>
+    <div class="rank">
+      <ol>
+        <li><span>《午夜病栋》第三话</span><span class="sc">收藏 4,812</span></li>
+        <li><span>《深夜放映室》第二季 第二集</span><span class="sc">收藏 3,905</span></li>
+        <li><span>《电车末班》广播剧 第 10 集</span><span class="sc">收藏 3,276</span></li>
+        <li><span>创作者专栏《布光三件事》</span><span class="sc">收藏 1,940</span></li>
+        <li><span>户外写真套图（重传版）</span><span class="sc">收藏 1,522</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 补充：时间线 -->
+  <section class="block" id="timeline">
+    <div class="sec-head">
+      <h2>本月变动时间线：从原版首播到片单更新</h2>
+    </div>
+    <ol class="tl">
+      <li><time datetime="2026-10-24">10月24日</time><b>《深夜放映室》第二季日文原版首播。</b>中文版按版权窗口期顺延一周。</li>
+      <li><time datetime="2026-10-28">10月28日</time><b>一批 2019 年前老片下架。</b>公告仅写版权变更，无片单。</li>
+      <li><time datetime="2026-10-31">10月31日</time><b>户外写真套图下架重传。</b>作者称色彩校对有问题，重传版裁切更紧。</li>
+      <li><time datetime="2026-11-01">11月1日</time><b>年龄验证入口合并。</b>日间与午夜共用，同时《深夜放映室》中文版上线。</li>
+      <li><time datetime="2026-11-03">11月3日</time><b>《电车末班》第一季完结。</b>第 10 集改为双人对白结尾。</li>
+      <li><time datetime="2026-11-06">11月6日</time><b>午夜分区片单更新。</b>新增 14 部，下架 3 部，2 部标 4K。</li>
+      <li><time datetime="2026-11-08">今天</time><b>《午夜病栋》第三话字幕修订。</b>版本号升至 v2.2，画面未动。</li>
+    </ol>
+  </section>
+
+  <!-- 相关推荐 -->
+  <section class="block" id="reco">
+    <div class="sec-head">
+      <h2>相关推荐：按你刚才看的内容延伸</h2>
+    </div>
+    <div class="reco">
+      <a href="/#picks">剧情正片 4K 修复版清单</a>
+      <a href="/#guide">番剧原版与中文版时间对照</a>
+      <a href="/#deep">会员三档权益实测</a>
+      <a href="/#faq">老片下架如何核对片单</a>
+      <a href="/#comments">《电车末班》结尾改动的两条反驳</a>
+      <a href="/#picks">有声广播剧完结合集</a>
+      <a href="/#timeline">本月分区变动时间线</a>
+    </div>
+  </section>
+
+</main>
+
+<aside class="stick" aria-label="侧栏">
+  <div class="box">
+    <h3>栏目导航</h3>
+    <nav class="side" id="sideNav" aria-label="侧栏栏目导航">
+      <a href="/#overview">分区概览</a>
+      <a href="/#picks">本周精选</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#rank">本周热度榜</a>
+      <a href="/#timeline">变动时间线</a>
+    </nav>
+  </div>
+  <div class="box">
+    <h3>本周数字</h3>
+    <ul class="mini">
+      <li>新增正片 <b>14</b> 部</li>
+      <li>下架老片 <b>3</b> 部</li>
+      <li>标 4K 条目 <b>2</b> 部</li>
+      <li>会员档位 <b>3</b> 档</li>
+      <li>在架条目合计 <b>118</b> 个</li>
+    </ul>
+  </div>
+  <div class="box">
+    <h3>核对入口</h3>
+    <ul class="mini">
+      <li>上架页右下方：版本号</li>
+      <li>收藏夹：失效标记</li>
+      <li>专栏《布光三件事》：删改对照</li>
+      <li>公告栏：版权变更说明</li>
+    </ul>
+  </div>
+</aside>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#3a1236"/>
+            <circle cx="32" cy="32" r="15" fill="none" stroke="#ff5a7a" stroke-width="5"/>
+            <circle cx="32" cy="32" r="5" fill="#ffd166"/>
+          </svg>
+          <span class="bt">天天久久涩涩日日</span>
+        </div>
+        <p>按版本号、更新日期与授权窗口期判断成人向内容的实际可看程度，把删改、延迟与版权变动拆开记录。</p>
+      </div>
+      <div>
+        <h4>内容分区</h4>
+        <ul>
+          <li><a href="/#overview">剧情正片区</a></li>
+          <li><a href="/#overview">深夜番剧区</a></li>
+          <li><a href="/#overview">有声阅读区</a></li>
+          <li><a href="/#overview">写真图集区</a></li>
+          <li><a href="/#overview">短视频片段区</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>常用栏目</h4>
+        <ul>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#rank">本周热度榜</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <ul>
+          <li><a href="/#timeline">变动时间线</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <span>更新时间 2026-11-08。对应正文可核对项：《午夜病栋》第三话字幕修订、11月6日片单更新、11月3日《电车末班》完结。</span>
+      <span>示例数据说明：条目、收藏数、评论均为演示用示例，非真实用户数据。© 2026 天天久久涩涩日日</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('q');
+  var fb=document.getElementById('searchFeedback');
+  var index=[];
+  document.querySelectorAll('main section.block').forEach(function(sec){
+    var id=sec.id;
+    sec.querySelectorAll('h2,h3,summary,p,li,td,th,a').forEach(function(el){
+      var t=(el.textContent||'').trim();
+      if(t.length>3)index.push({text:t,id:id,anchor:el.closest('details')?el:el});
+    });
+  });
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var kw=(input.value||'').trim().toLowerCase();
+      if(!kw){fb.hidden=true;fb.textContent='';return;}
+      var hit=index.filter(function(it){return it.text.toLowerCase().indexOf(kw)>-1;});
+      if(hit.length===0){
+        fb.hidden=false;
+        fb.textContent='没有找到与“'+input.value.trim()+'”匹配的条目，可试试“午夜病栋”“电车末班”“4K”。';
+        return;
+      }
+      fb.hidden=false;
+      fb.textContent='找到 '+hit.length+' 条匹配，已跳转到「'+hit[0].text.slice(0,18)+'…」所在栏目。';
+      var target=document.getElementById(hit[0].id);
+      if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  var sideLinks=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections=Array.prototype.slice.call(document.querySelectorAll('main section.block'));
+  function onScroll(){
+    if(window.scrollY>420){toTop.classList.add('show');}else{toTop.classList.remove('show');}
+    var pos=window.scrollY+160,cur=null;
+    sections.forEach(function(s){if(s.offsetTop<=pos){cur=s.id;}});
+    sideLinks.forEach(function(a){
+      var on=a.getAttribute('href')==='/#'.concat(cur||'');
+      a.classList.toggle('active',on);
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  if(toTop){
+    toTop.addEventListener('click',function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+</html>
